@@ -111,17 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pa3
+# Target rules for targets named cs124pa3
 
 # Build rule for target.
-pa3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pa3
-.PHONY : pa3
+cs124pa3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cs124pa3
+.PHONY : cs124pa3
 
 # fast build rule for target.
-pa3/fast:
-	$(MAKE) -f CMakeFiles/pa3.dir/build.make CMakeFiles/pa3.dir/build
-.PHONY : pa3/fast
+cs124pa3/fast:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/build
+.PHONY : cs124pa3/fast
+
+hill_climbing.o: hill_climbing.c.o
+
+.PHONY : hill_climbing.o
+
+# target to build an object file
+hill_climbing.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/hill_climbing.c.o
+.PHONY : hill_climbing.c.o
+
+hill_climbing.i: hill_climbing.c.i
+
+.PHONY : hill_climbing.i
+
+# target to preprocess a source file
+hill_climbing.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/hill_climbing.c.i
+.PHONY : hill_climbing.c.i
+
+hill_climbing.s: hill_climbing.c.s
+
+.PHONY : hill_climbing.s
+
+# target to generate assembly for a file
+hill_climbing.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/hill_climbing.c.s
+.PHONY : hill_climbing.c.s
+
+kk.o: kk.c.o
+
+.PHONY : kk.o
+
+# target to build an object file
+kk.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk.c.o
+.PHONY : kk.c.o
+
+kk.i: kk.c.i
+
+.PHONY : kk.i
+
+# target to preprocess a source file
+kk.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk.c.i
+.PHONY : kk.c.i
+
+kk.s: kk.c.s
+
+.PHONY : kk.s
+
+# target to generate assembly for a file
+kk.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk.c.s
+.PHONY : kk.c.s
+
+kk_alg.o: kk_alg.c.o
+
+.PHONY : kk_alg.o
+
+# target to build an object file
+kk_alg.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk_alg.c.o
+.PHONY : kk_alg.c.o
+
+kk_alg.i: kk_alg.c.i
+
+.PHONY : kk_alg.i
+
+# target to preprocess a source file
+kk_alg.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk_alg.c.i
+.PHONY : kk_alg.c.i
+
+kk_alg.s: kk_alg.c.s
+
+.PHONY : kk_alg.s
+
+# target to generate assembly for a file
+kk_alg.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/kk_alg.c.s
+.PHONY : kk_alg.c.s
 
 main.o: main.c.o
 
@@ -129,7 +210,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/pa3.dir/build.make CMakeFiles/pa3.dir/main.c.o
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +219,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/pa3.dir/build.make CMakeFiles/pa3.dir/main.c.i
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,8 +228,116 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/pa3.dir/build.make CMakeFiles/pa3.dir/main.c.s
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/main.c.s
 .PHONY : main.c.s
+
+maxheap.o: maxheap.c.o
+
+.PHONY : maxheap.o
+
+# target to build an object file
+maxheap.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/maxheap.c.o
+.PHONY : maxheap.c.o
+
+maxheap.i: maxheap.c.i
+
+.PHONY : maxheap.i
+
+# target to preprocess a source file
+maxheap.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/maxheap.c.i
+.PHONY : maxheap.c.i
+
+maxheap.s: maxheap.c.s
+
+.PHONY : maxheap.s
+
+# target to generate assembly for a file
+maxheap.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/maxheap.c.s
+.PHONY : maxheap.c.s
+
+rand_sol_and_neighbor.o: rand_sol_and_neighbor.c.o
+
+.PHONY : rand_sol_and_neighbor.o
+
+# target to build an object file
+rand_sol_and_neighbor.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/rand_sol_and_neighbor.c.o
+.PHONY : rand_sol_and_neighbor.c.o
+
+rand_sol_and_neighbor.i: rand_sol_and_neighbor.c.i
+
+.PHONY : rand_sol_and_neighbor.i
+
+# target to preprocess a source file
+rand_sol_and_neighbor.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/rand_sol_and_neighbor.c.i
+.PHONY : rand_sol_and_neighbor.c.i
+
+rand_sol_and_neighbor.s: rand_sol_and_neighbor.c.s
+
+.PHONY : rand_sol_and_neighbor.s
+
+# target to generate assembly for a file
+rand_sol_and_neighbor.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/rand_sol_and_neighbor.c.s
+.PHONY : rand_sol_and_neighbor.c.s
+
+repeated_random.o: repeated_random.c.o
+
+.PHONY : repeated_random.o
+
+# target to build an object file
+repeated_random.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/repeated_random.c.o
+.PHONY : repeated_random.c.o
+
+repeated_random.i: repeated_random.c.i
+
+.PHONY : repeated_random.i
+
+# target to preprocess a source file
+repeated_random.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/repeated_random.c.i
+.PHONY : repeated_random.c.i
+
+repeated_random.s: repeated_random.c.s
+
+.PHONY : repeated_random.s
+
+# target to generate assembly for a file
+repeated_random.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/repeated_random.c.s
+.PHONY : repeated_random.c.s
+
+simulated_annealing.o: simulated_annealing.c.o
+
+.PHONY : simulated_annealing.o
+
+# target to build an object file
+simulated_annealing.c.o:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/simulated_annealing.c.o
+.PHONY : simulated_annealing.c.o
+
+simulated_annealing.i: simulated_annealing.c.i
+
+.PHONY : simulated_annealing.i
+
+# target to preprocess a source file
+simulated_annealing.c.i:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/simulated_annealing.c.i
+.PHONY : simulated_annealing.c.i
+
+simulated_annealing.s: simulated_annealing.c.s
+
+.PHONY : simulated_annealing.s
+
+# target to generate assembly for a file
+simulated_annealing.c.s:
+	$(MAKE) -f CMakeFiles/cs124pa3.dir/build.make CMakeFiles/cs124pa3.dir/simulated_annealing.c.s
+.PHONY : simulated_annealing.c.s
 
 # Help Target
 help:
@@ -158,10 +347,31 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... pa3"
+	@echo "... cs124pa3"
+	@echo "... hill_climbing.o"
+	@echo "... hill_climbing.i"
+	@echo "... hill_climbing.s"
+	@echo "... kk.o"
+	@echo "... kk.i"
+	@echo "... kk.s"
+	@echo "... kk_alg.o"
+	@echo "... kk_alg.i"
+	@echo "... kk_alg.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... maxheap.o"
+	@echo "... maxheap.i"
+	@echo "... maxheap.s"
+	@echo "... rand_sol_and_neighbor.o"
+	@echo "... rand_sol_and_neighbor.i"
+	@echo "... rand_sol_and_neighbor.s"
+	@echo "... repeated_random.o"
+	@echo "... repeated_random.i"
+	@echo "... repeated_random.s"
+	@echo "... simulated_annealing.o"
+	@echo "... simulated_annealing.i"
+	@echo "... simulated_annealing.s"
 .PHONY : help
 
 

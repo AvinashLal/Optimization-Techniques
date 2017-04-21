@@ -135,7 +135,7 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 CMAKE_OSX_SYSROOT:STRING=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=pa3
+CMAKE_PROJECT_NAME:STATIC=cs124pa3
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ranlib
@@ -188,6 +188,12 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Value Computed by CMake
+cs124pa3_BINARY_DIR:STATIC=/Users/avinashlal/Desktop/cs124/pa3/cmake-build-debug
+
+//Value Computed by CMake
+cs124pa3_SOURCE_DIR:STATIC=/Users/avinashlal/Desktop/cs124/pa3
 
 //Value Computed by CMake
 pa3_BINARY_DIR:STATIC=/Users/avinashlal/Desktop/cs124/pa3/cmake-build-debug
