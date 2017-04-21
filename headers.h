@@ -6,6 +6,13 @@
 
 #define CS124PA3_HEADERS_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <inttypes.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+#include <time.h>
 
 
 float rand_val();

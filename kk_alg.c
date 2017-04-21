@@ -2,7 +2,9 @@
 // Created by Alex on 4/20/2017.
 //
 
-#include "main.c"
+#include "headers.h"
+#include "maxheap.c"
+
 
 int64_t kk(int size, int64_t* arr) {
     maxheap *heap = (maxheap *)malloc(sizeof(maxheap));

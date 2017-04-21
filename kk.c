@@ -5,50 +5,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <inttypes.h>
 #include "maxheap.c"
+
 
 #define sz 100
 
 void printheap(maxheap *heap);
 
 int main(int argc, char *argv[]) {
+    
 
     // checks that user enters right number of arguments
     if (argc != 2) {
-        printf("Must be in form ./kk inputfile");
+        printf("Must be in form ./kk inputfile\n");
         return 1;
     }
 
     // seeds random generator
     srand(clock());
-    maxheap *heap = (maxheap *)malloc(sizeof(maxheap));
+    maxheap* heap = (maxheap *)malloc(sizeof(maxheap));
 
     heap->lst = NULL;
     heap->size = 0;
+        
 
     // stores 2nd command line argument in inputfile variable
-    char *inputfile = argv[1];
+    char* inputfile = (char*)argv[1];
     // inputfile = make_rand_outputfile((char *)"inputfile.txt", sz);
 
     // opens inputfile and checks for NULL
-    FILE *fp;
-    fp = fopen(inputfile, "r");
-    if (fp == NULL)
+    FILE* fp = fopen(inputfile, "r");
+    if (fp == NULL) {
+        fprintf(stderr, "what\n");
         return -1;
+    }
+    
 
-    char temp[15];
+    
     int64_t val;
     char *pEnd;
+    
+    
+    if (fp != NULL) {
+        char temp[20];
+        while (fgets(temp, 20, fp) != NULL) {
 
-    // inserting the 100 values from the file into the heap
-    for (int i = 0; i < sz; i++) {
-        if (fgets(temp, 15, fp) != NULL)
-        {
             val = strtoull (temp, &pEnd, 10);
+            printf("%ld\n", val);
             insertNode(heap, val);
         }
-
     }
+    
+
+    
 
     // extracts the two biggest elements in the heap, calculates the difference
     // re-inserts the differential into the heao
@@ -61,7 +71,8 @@ int main(int argc, char *argv[]) {
     }
 
     int64_t residue = extractMax(heap);
-    printf("%lld\n", residue);
+    //printheap(heap);
+    printf("%lld\n", (long long)residue);
     free(heap);
     free(heap->lst);
     fclose(fp);
@@ -72,7 +83,7 @@ int main(int argc, char *argv[]) {
 // prints values stored in heap
 void printheap(maxheap *heap) {
     for (int i = 0; i < sz; i++) {
-        printf("%lld ",heap->lst[i].value);
+        printf("%ld ",heap->lst[i].v);
     }
     printf("\nSize is:%d\n", heap->size);
 

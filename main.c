@@ -1,19 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <inttypes.h>
-#include <time.h>
-#include <math.h>
-#include <string.h>
-#include <time.h>
-
-#include "headers.h"
+#include "kk_alg.c"
+#include "rand_sol_and_neighbor.c"
+#include "hill_climbing.c"
+#include "repeated_random.c"
+#include "simulated_annealing.c"
 
 #define sz 100
 #define TENTOTWELVE 1000000000000
 
 char * make_rand_outputfile(char *outputfile, int d);
 
-int main(int argc, char *argv[]) {
+int main(void) {
     printf("%s\t| %s\t| %s\t |%s\n", "Algorithm", "Instance", "Residue", "Time Used");
 
     srand(clock()); // seeds random generator
@@ -37,10 +33,10 @@ int main(int argc, char *argv[]) {
 
         // inserting the 100 values from the file into the heap
         int64_t array[sz];
-        for (int i = 0; i < sz; i++) {
+        for (int j = 0; j < sz; j++) {
             if (fgets(temp, 15, fp) != NULL) {
                 val = strtoull (temp, &pEnd, 10);
-                array[i] = val;
+                array[j] = val;
             }
         }
 
@@ -52,14 +48,14 @@ int main(int argc, char *argv[]) {
         int64_t result1 = kk(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "kk", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "kk", i, (long long)result1, cpu_time_used);
 
 
         start = clock();
         result1 = repeated_random_std(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "rr_std", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "rr_std", i, (long long)result1, cpu_time_used);
 
 
 
@@ -67,7 +63,7 @@ int main(int argc, char *argv[]) {
         result1 = hill_climbing_std(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "hc_std", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "hc_std", i, (long long)result1, cpu_time_used);
 
 
 
@@ -75,7 +71,7 @@ int main(int argc, char *argv[]) {
         result1 = simulated_annealing_std(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "sa_std", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "sa_std", i, (long long)result1, cpu_time_used);
 
 
 
@@ -83,7 +79,7 @@ int main(int argc, char *argv[]) {
         result1 = repeated_random_pp(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "rr_pp", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "rr_pp", i, (long long)result1, cpu_time_used);
 
 
 
@@ -91,7 +87,7 @@ int main(int argc, char *argv[]) {
         result1 = hill_climbing_pp(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "hc_pp", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "hc_pp", i, (long long)result1, cpu_time_used);
 
 
 
@@ -99,7 +95,7 @@ int main(int argc, char *argv[]) {
         result1 = simulated_annealing_pp(sz, array);
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "sa_pp", i, result1, cpu_time_used);
+        printf("%s\t|%-10d\t| %-6lld\t| %3f\t \n", "sa_pp", i, (long long)result1, cpu_time_used);
 
     }
 
@@ -122,8 +118,8 @@ char * make_rand_outputfile(char *outputfile, int d) {
     if (fp == NULL) /* check that the file was actually opened */
         return NULL;
 
-    for (int n = 0; n < sz; n++) {
-        fprintf(fp, "%lld\n", make_64bit_rand_number());
+    for (int n = 0; n < d; n++) {
+        fprintf(fp, "%lld\n", (long long)make_64bit_rand_number());
     }
 
     fclose(fp);
