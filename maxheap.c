@@ -4,7 +4,7 @@
 
 //define node structure
 typedef struct node {
-    int v ;
+    int64_t v ;
 } node ;
 
 

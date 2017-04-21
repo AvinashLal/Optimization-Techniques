@@ -3,6 +3,8 @@
 //
 
 #include "headers.h"
+#include "maxheap.c"
+
 
 int64_t kk(int size, int64_t* arr) {
     maxheap *heap = (maxheap *)malloc(sizeof(maxheap));

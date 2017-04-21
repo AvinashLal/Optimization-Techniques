@@ -14,16 +14,6 @@
 #include <string.h>
 #include <time.h>
 
-#include "main.c"
-#include "maxheap.c"
-#include "kkarp.c"
-#include "kk_alg.c"
-#include "hill_climbing.c"
-#include "rand_sol_and_neighbor.c"
-#include "repeated_random.c"
-#include "simulated_annealing.c"
-
-
 
 float rand_val();
 
