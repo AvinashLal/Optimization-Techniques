@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "headers.h"
 
 //code used to implement this heap was influenced by robin thomas. The code for his heap can be found here https://github.com/robin-thomas/max-heap/blob/master/maxHeap.c
 

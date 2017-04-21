@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/avinashlal/Desktop/cs124/pa3/main.c
+stdio.h
+-
+maxheap.c
+/Users/avinashlal/Desktop/cs124/pa3/maxheap.c
+
+/Users/avinashlal/Desktop/cs124/pa3/maxheap.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+
