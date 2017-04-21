@@ -16,7 +16,6 @@
 
 #include "main.c"
 #include "maxheap.c"
-#include "kkarp.c"
 #include "kk_alg.c"
 #include "hill_climbing.c"
 #include "rand_sol_and_neighbor.c"
