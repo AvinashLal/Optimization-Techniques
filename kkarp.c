@@ -26,7 +26,7 @@ int main (int arg, char* argv[]){
         return 1
     }
 
-    fgets()
+    fgets(f,100, )
     for (int i = 0; i < 15; i++) {
         insertNode(heap, i);
     }
