@@ -6,22 +6,6 @@
 
 #define CS124PA3_HEADERS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <inttypes.h>
-#include <time.h>
-#include <math.h>
-#include <string.h>
-#include <time.h>
-
-#include "main.c"
-#include "maxheap.c"
-#include "kk_alg.c"
-#include "hill_climbing.c"
-#include "rand_sol_and_neighbor.c"
-#include "repeated_random.c"
-#include "simulated_annealing.c"
-
 
 
 float rand_val();

@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <inttypes.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+#include <time.h>
+
 #include "headers.h"
 
 #define sz 100

@@ -2,7 +2,7 @@
 // Created by Alex on 4/20/2017.
 //
 
-#include "headers.h"
+#include "main.c"
 
 // generates a rand value in [0,1]
 float rand_val() {

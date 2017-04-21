@@ -2,7 +2,7 @@
 // Created by Alex on 4/20/2017.
 //
 
-#include  "headers.h"
+#include "main.c"
 
 #define MAX_ITER 25000
 

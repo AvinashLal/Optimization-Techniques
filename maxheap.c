@@ -1,4 +1,4 @@
-#include "headers.h"
+#include "main.c"
 
 //code used to implement this heap was influenced by robin thomas. The code for his heap can be found here https://github.com/robin-thomas/max-heap/blob/master/maxHeap.c
 
