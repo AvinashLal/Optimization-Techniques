@@ -14,9 +14,20 @@
 #include <string.h>
 #include <time.h>
 
-int64_t kk(int sz, int64_t* array);
+#include "main.c"
+#include "maxheap.c"
+#include "kkarp.c"
+#include "kk_alg.c"
+#include "hill_climbing.c"
+#include "rand_sol_and_neighbor.c"
+#include "repeated_random.c"
+#include "simulated_annealing.c"
+
+
 
 float rand_val();
+
+int64_t kk(int size, int64_t* arr);
 
 int64_t *gen_rand_sol_std(int size);
 
